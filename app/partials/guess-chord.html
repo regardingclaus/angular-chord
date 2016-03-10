@@ -1,0 +1,20 @@
+<h1>Chord Guesser Game</h1>
+<h3>What chord is in the picture?</h3>
+
+<div ng-controller="ChordController as c">
+	<div ng-hide="c.guessNo == 0">
+		<div ng-show="c.guessIsCorrect">
+			<p>You guessed it after {{c.guessNo}} tries!</p>
+			<p>The chord is indeed {{c.randomChord.name}}!</p>
+			<button class="play-again" type="button" ng-click="c.play()">Play again!</button>
+		</div>
+		<div ng-show="!c.guessIsCorrect">
+			<p>Nope, that's not correct. Try again.</p>
+		</div>
+	</div>	
+	<img ng-src={{c.randomChord.img}}>
+	<div ng-repeat="chord in c.chords"> 
+		<button type="button" ng-hide="c.guessIsCorrect" ng-click="c.setResult(chord.name)">{{chord.name}}
+		</button>
+	</div>
+</div>
