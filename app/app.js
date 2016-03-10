@@ -26,6 +26,22 @@ app.controller('ChordController', function(){
 	
 });
 
+app.directive('guessMessages', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'partials/guess-messages.html'
+	};
+});
+
+app.directive('guessButtons', function(){
+	return {
+		restrict: 'E', 
+		templateUrl: 'partials/guess-buttons.html'
+	};
+});
+
+//Create chord buttons and messages directives
+
 var chords = [
 	{
 		name: "C", 

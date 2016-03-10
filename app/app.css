@@ -1,3 +1,30 @@
-.play-again {
-	margin: 0 0 10px 0;
+body {
+	font-family: "Comic Sans MS";
+	background: lightgreen;
+}
+
+.pic-and-messages {
+	display: table;
+	border-collapse: separate;
+	border-spacing: 5px;
+	position: relative;
+}
+
+.chord-pic, guess-messages {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.chord-pic {
+	height: 350px;
+}
+
+guess-messages {
+	padding-left: 10px;
+	height: 100%;
+}
+
+guess-buttons {
+	margin: 10px 0 0 0;
 }

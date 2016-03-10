@@ -1,0 +1,8 @@
+<div ng-show="c.guessIsCorrect">
+	<p>You guessed it after {{c.guessNo}} trie(s)!</p>
+	<p>The chord is indeed {{c.randomChord.name}}!</p>
+	<button type="button" ng-click="c.play()">Play again!</button>
+</div>
+<div ng-show="!c.guessIsCorrect">
+	<p>Nope, that's not correct. Try again.</p>
+</div>
