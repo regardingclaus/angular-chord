@@ -6,7 +6,7 @@ var app = angular.module('chordApp', []);
 app.controller('ChordController', function(){
 	this.chords = chords;
 
-	this.setResult = function(guess){
+	this.guess = function(guess){
 		this.guessNo++;
 		this.guessIsCorrect = this.randomChord.name === guess;	
 	};
@@ -40,7 +40,6 @@ app.directive('guessButtons', function(){
 	};
 });
 
-//Create chord buttons and messages directives
 
 var chords = [
 	{
@@ -99,6 +98,6 @@ var chords = [
 		name: "Bm",
 		img: "img/gtrBm.png"
 	},
-
 ];
+
 })();
